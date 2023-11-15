@@ -23,7 +23,7 @@
             }
 
             li.nav-item a:hover {
-                background-color: #ddd;
+                background-color: #868686;
                 color: #1b1b1b;
             }
             table {
@@ -32,7 +32,7 @@
             }
 
             table, th, td {
-                border: 1px solid #ccc;
+                border: 1px solid #9b9a9a;
             }
 
             th, td {
@@ -40,19 +40,31 @@
                 text-align: left;
             }
 
-            th {
-                background-color: #f2f2f2;
-            }
     </style>
     </head>
     <body bgcolor="ededed">
         <ul style="font-family: Verdana, Geneva, Tahoma, sans-serif;" class="navbar">
-            <li class="nav-item"><a href="#"><b> SPENTU </b></a></li>
+            <li class="nav-item"><a href="#" onclick="showText()"><b>SPENTU</b></a></li>
             <li class="nav-item"><a href="#">Beranda</a></li>
             <li class="nav-item"><a href="#">Tentang Kami</a></li>
             <li class="nav-item"><a href="#">Layanan</a></li>
             <li class="nav-item"><a href="#">Kontak</a></li>
-        </ul><br>
+        </ul>
+        <br>
+        <div id="textDisplay" style="display: none;">
+            <p>Ini adalah website tentang sekolah SMPN 7 Tegal.</p>
+        </div>
+        <script>
+            function showText() {
+                var textDisplay = document.getElementById("textDisplay");
+                if (textDisplay.style.display === "none") {
+                    textDisplay.style.display = "block";
+                } else {
+                    textDisplay.style.display = "none";
+                }
+            }
+        </script>
+        
     
          <h1 style="color:hsl(0, 0%, 11%); font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 70px ;text-align: center;"><b>SMP Negeri 7 Kota Tegal</b></h1>
          <img src = "smp 7 tegal.png" alt = "SMP 7 Tegal"  width = 100%  height= "auto;">
@@ -130,5 +142,8 @@
                 <h1> </h1>
             </form>
         </footer>
+        <script>
+            window.alert("Holla amigos!");
+        </script>
     </body>
 </html>
